@@ -12,4 +12,4 @@ Note: If you do it directly from the VScode terminal, it will load it's own prof
 Now every time you load a PowerShell window, your profile will be loaded along with your new keybind. To remove, just simply edit the file again and remove the code.
 
 ## ExpandAliases.ps1
-This will alow you to bind a key (such as `Ctrl+e`) to automatically convert any commands you have typed into the terminal to their full name. e.g `gci` > `Get-ChildItem`
+This will alow you to bind a key (such as `Ctrl+e`) to automatically convert any command aliases you have typed into the terminal to their full name. e.g `gci` > `Get-ChildItem`
