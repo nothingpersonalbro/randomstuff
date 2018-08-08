@@ -2,7 +2,7 @@
 # This must be ran as administrator
 
 $Menu = 'Open PowerShell window here (Admin)'
-$Command = "$PSHOME\powershell.exe -NoExit -NoProfile -Command ""Set-Location '%V'"""
+$Command = "$PSHOME\powershell.exe -NoExit -Command ""Set-Location '%V'"""
 
 'directory', 'directory\background', 'drive' | ForEach-Object {
     New-Item -Path "Registry::HKEY_CLASSES_ROOT\$_\shell" -Name runas\command -Force |
