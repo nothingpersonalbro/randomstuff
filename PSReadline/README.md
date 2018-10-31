@@ -13,3 +13,4 @@ Now every time you load a PowerShell window, your profile will be loaded along w
 
 ## ExpandAliases.ps1
 This will alow you to bind a key (such as `Ctrl+e`) to automatically convert any command aliases you have typed into the terminal to their full name. e.g `gci` > `Get-ChildItem`
+![ExpandAliases](ExpandAliases.gif)
