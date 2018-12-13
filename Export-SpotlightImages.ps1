@@ -122,12 +122,14 @@ function Export-SpotlightImages {
     }
 
     end {
-        # Copy images to the new destination.
-        if ($NewImageList) {Copy-Item -Path $NewImageList -Destination $DestinationFolder}
+        # Copy images to the new destination, then cleanup.
+        if ($NewImageList) {
+            Copy-Item -Path $NewImageList -Destination $DestinationFolder
+            $NewImageList | Remove-Item -ErrorAction SilentlyContinue
+        }
 
         # Clean up temp images.
-        $NewImageList | Remove-Item -ErrorAction SilentlyContinue
-        $TempImageList | Remove-Item -ErrorAction SilentlyContinue
+        if ($TempImageList) {$TempImageList | Remove-Item -ErrorAction SilentlyContinue}
 
         Write-Output "$($NewImageList.Count) images have been created in '$DestinationFolder'."
     }
