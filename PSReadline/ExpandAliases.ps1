@@ -4,8 +4,7 @@
 if ($host.Name -eq 'ConsoleHost') {
     # Binds Ctrl+e to expand aliases
     $ScriptBlock = {
-        param($key, $arg)
-        $ast = $null
+        $ast    = $null
         $tokens = $null
         $errors = $null
         $cursor = $null
